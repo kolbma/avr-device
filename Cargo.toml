@@ -23,6 +23,7 @@ all-features = true
 [features]
 atmega1280 = []
 atmega168 = []
+atmega169p = []
 atmega2560 = []
 atmega8 = []
 atmega328p = []

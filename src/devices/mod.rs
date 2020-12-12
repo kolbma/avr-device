@@ -41,6 +41,25 @@ impl atmega168::Peripherals {
     }
 }
 
+/// [ATmega169P](https://www.microchip.com/wwwproducts/en/ATmega169P)
+#[cfg(feature = "atmega169p")]
+pub mod atmega169p;
+
+#[cfg(feature = "atmega169p")]
+impl atmega169p::Peripherals {
+    /// Returns all the peripherals *once*
+    #[inline]
+    pub fn take() -> Option<Self> {
+        crate::interrupt::free(|_| {
+            if unsafe { DEVICE_PERIPHERALS } {
+                None
+            } else {
+                Some(unsafe { atmega169p::Peripherals::steal() })
+            }
+        })
+    }
+}
+
 /// [ATmega2560](https://www.microchip.com/wwwproducts/en/ATmega2560)
 #[cfg(feature = "atmega2560")]
 pub mod atmega2560;

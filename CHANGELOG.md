@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Support for `ATmega4809` ([#63]).
+- Support for `ATmega169P` ().
 - Support for `ATtiny841` and `ATtiny861` ([#67]).
 
 ### Changed
