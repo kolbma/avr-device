@@ -1,7 +1,10 @@
 //! This crate contains register definitions for
 #![cfg_attr(feature = "atmega1280", doc = "**atmega1280**,")]
 #![cfg_attr(feature = "atmega168", doc = "**atmega168**,")]
+#![cfg_attr(feature = "atmega169", doc = "**atmega169**,")]
+#![cfg_attr(feature = "atmega169a", doc = "**atmega169a**,")]
 #![cfg_attr(feature = "atmega169p", doc = "**atmega169p**,")]
+#![cfg_attr(feature = "atmega169pa", doc = "**atmega169pa**,")]
 #![cfg_attr(feature = "atmega2560", doc = "**atmega2560**,")]
 #![cfg_attr(feature = "atmega8", doc = "**atmega8**,")]
 #![cfg_attr(feature = "atmega328p", doc = "**atmega328p**,")]
@@ -22,7 +25,10 @@
 //! The following chips are available (using feature flags of the same name):
 //! * `atmega1280`
 //! * `atmega168`
+//! * `atmega169`
+//! * `atmega169a`
 //! * `atmega169p`
+//! * `atmega169pa`
 //! * `atmega2560`
 //! * `atmega8`
 //! * `atmega328p`
@@ -89,8 +95,14 @@ mod devices;
 pub use crate::devices::atmega1280;
 #[cfg(feature = "atmega168")]
 pub use crate::devices::atmega168;
+#[cfg(feature = "atmega169")]
+pub use crate::devices::atmega169;
+#[cfg(feature = "atmega169a")]
+pub use crate::devices::atmega169a;
 #[cfg(feature = "atmega169p")]
 pub use crate::devices::atmega169p;
+#[cfg(feature = "atmega169pa")]
+pub use crate::devices::atmega169pa;
 #[cfg(feature = "atmega2560")]
 pub use crate::devices::atmega2560;
 #[cfg(feature = "atmega328p")]
@@ -123,7 +135,10 @@ pub use crate::devices::attiny88;
 #[cfg(not(any(
     feature = "atmega1280",
     feature = "atmega168",
+    feature = "atmega169",
+    feature = "atmega169a",
     feature = "atmega169p",
+    feature = "atmega169pa",
     feature = "atmega2560",
     feature = "atmega8",
     feature = "atmega328p",

@@ -13,7 +13,10 @@ features = ["atmega32u4"]
 Via the feature you can select which chip you want the register specifications for.  The following list is what is currently supported:
 * `atmega1280`
 * `atmega168`
+* `atmega169`
+* `atmega169a`
 * `atmega169p`
+* `atmega169pa`
 * `atmega2560`
 * `atmega8`
 * `atmega328p`

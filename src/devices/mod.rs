@@ -41,6 +41,44 @@ impl atmega168::Peripherals {
     }
 }
 
+/// [ATmega169](https://www.microchip.com/wwwproducts/en/ATmega169)
+#[cfg(feature = "atmega169")]
+pub mod atmega169;
+
+#[cfg(feature = "atmega169")]
+impl atmega169::Peripherals {
+    /// Returns all the peripherals *once*
+    #[inline]
+    pub fn take() -> Option<Self> {
+        crate::interrupt::free(|_| {
+            if unsafe { DEVICE_PERIPHERALS } {
+                None
+            } else {
+                Some(unsafe { atmega169::Peripherals::steal() })
+            }
+        })
+    }
+}
+
+/// [ATmega169A](https://www.microchip.com/wwwproducts/en/ATmega169A)
+#[cfg(feature = "atmega169a")]
+pub mod atmega169a;
+
+#[cfg(feature = "atmega169a")]
+impl atmega169a::Peripherals {
+    /// Returns all the peripherals *once*
+    #[inline]
+    pub fn take() -> Option<Self> {
+        crate::interrupt::free(|_| {
+            if unsafe { DEVICE_PERIPHERALS } {
+                None
+            } else {
+                Some(unsafe { atmega169a::Peripherals::steal() })
+            }
+        })
+    }
+}
+
 /// [ATmega169P](https://www.microchip.com/wwwproducts/en/ATmega169P)
 #[cfg(feature = "atmega169p")]
 pub mod atmega169p;
@@ -55,6 +93,25 @@ impl atmega169p::Peripherals {
                 None
             } else {
                 Some(unsafe { atmega169p::Peripherals::steal() })
+            }
+        })
+    }
+}
+
+/// [ATmega169PA](https://www.microchip.com/wwwproducts/en/ATmega169PA)
+#[cfg(feature = "atmega169pa")]
+pub mod atmega169pa;
+
+#[cfg(feature = "atmega169pa")]
+impl atmega169pa::Peripherals {
+    /// Returns all the peripherals *once*
+    #[inline]
+    pub fn take() -> Option<Self> {
+        crate::interrupt::free(|_| {
+            if unsafe { DEVICE_PERIPHERALS } {
+                None
+            } else {
+                Some(unsafe { atmega169pa::Peripherals::steal() })
             }
         })
     }
