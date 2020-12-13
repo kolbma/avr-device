@@ -26,6 +26,9 @@ CPU:
         PRESCALER_128: [7, "Prescaler Value 128"]
         PRESCALER_256: [8, "Prescaler Value 256"]
 EXINT:
+  _modify:
+    EIFR:
+      access: read-write
   EICRA:
     ISC??:
       _replace_enum:
