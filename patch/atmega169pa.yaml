@@ -1,0 +1,4 @@
+_svd: ../svd/atmega169pa.svd
+
+_include:
+  - "atmega169p.yaml"
