@@ -873,8 +873,6 @@
           <bitfield caption="LCD A or B waveform" mask="0x40" name="LCDAB"/>
           <bitfield caption="LCD Interrupt Flag" mask="0x10" name="LCDIF"/>
           <bitfield caption="LCD Interrupt Enable" mask="0x08" name="LCDIE"/>
-          <bitfield caption="LCD Buffer Disable" mask="0x04" name="LCDBD"/>
-          <bitfield caption="LCD Contrast Control Disable" mask="0x02" name="LCDCCD"/>
           <bitfield caption="LCD Blanking" mask="0x01" name="LCDBL"/>
         </register>
         <register caption="LCD Control and Status Register B" name="LCDCRB" offset="0xE5" size="1">
@@ -889,7 +887,6 @@
         </register>
         <register caption="LCD Contrast Control Register" name="LCDCCR" offset="0xE7" size="1">
           <bitfield caption="LCD Display Configuration Bits" mask="0xE0" name="LCDDC" values="LCD_DISP_CONF_DRIVE"/>
-          <bitfield caption="LCD Maximum Drive Time" mask="0x10" name="LCDMDT"/>
           <bitfield caption="LCD Contrast Controls" mask="0x0F" name="LCDCC" values="LCD_CONTRAST"/>
         </register>
         <register caption="LCD Data Register 18" name="LCDDR18" offset="0xFE" size="1" mask="0x01"/>
