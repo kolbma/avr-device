@@ -1,0 +1,7 @@
+_include:
+  - "16bit.yaml"
+
+TCCR?C:
+  _modify:
+    FOC??:
+      access: read-write

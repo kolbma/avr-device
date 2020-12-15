@@ -7,7 +7,7 @@ TC0:
 
 TC1:
   _include:
-    - "dev/16bit.yaml"
+    - "dev/16bit-atmega169p.yaml"
 
 TC2:
   _include:
